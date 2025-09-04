@@ -1,14 +1,14 @@
 package com.example.userservice;
 
-public class UserDto {
+public class UserResponseDto {
 
     private Long id;
     private String name;
 
-    public UserDto() {
+    public UserResponseDto() {
     }
 
-    public UserDto(Long id, String name) {
+    public UserResponseDto(Long id, String name) {
         this.id = id;
         this.name = name;
     }

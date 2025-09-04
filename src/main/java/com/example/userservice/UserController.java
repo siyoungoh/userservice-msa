@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @GetMapping("/{id}")
-    public UserDto getUser(@PathVariable Long id) {
-        return new UserDto(id, "User" + id);
+    public UserResponseDto getUser(@PathVariable Long id) {
+        return new UserResponseDto(id, "User" + id);
     }
 }
