@@ -1,2 +1,18 @@
 server:
-  port: 8081
+  port: ${SERVER_PORT:8081}
+
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/userdb?serverTimezone=UTC&useSSL=false}
+    username: ${SPRING_DATASOURCE_USERNAME:userapp}
+    password: ${SPRING_DATASOURCE_PASSWORD:userpw}
+  jpa:
+    hibernate:
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+  sql:
+    init:
+      mode: never
